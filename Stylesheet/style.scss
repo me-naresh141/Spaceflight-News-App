@@ -1,0 +1,97 @@
+@import './reset';
+@import './genral';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+// header
+header {
+  background-color: black;
+  color: white;
+}
+.container {
+  max-width: 1600px;
+  width: 60%;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 1rem;
+  }
+}
+// main
+.main {
+  background: linear-gradient(rgb(210, 236, 255), rgb(222, 196, 231));
+  .container {
+    background-color: rgba(226, 185, 252, 0.33);
+    .text-center {
+      position: relative;
+      padding: 2rem 0rem 5rem 0rem;
+      select {
+        position: fixed;
+        left: 40%;
+        width: 20%;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+        option {
+          cursor: pointer;
+          margin: 2rem;
+        }
+      }
+    }
+    ul {
+      height: 50rem;
+      overflow: auto;
+      li {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem;
+        img {
+          width: 40%;
+          height: 15rem;
+        }
+        div {
+          width: 50%;
+          padding-top: 1rem;
+          span {
+            padding: 0.5rem 1rem;
+            font-size: 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            background-color: rgba(210, 236, 255, 0.566);
+          }
+          p {
+            margin: 1rem 0rem;
+            font-size: 2rem;
+            font-weight: 500;
+          }
+          a {
+            display: grid;
+            place-content: end;
+            text-decoration: none;
+          }
+          button {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 0.3rem;
+            font-size: 1.3rem;
+            border-radius: 3px;
+            &:hover {
+              box-shadow: 0px 2px 3px 3px rgba(210, 236, 255, 0.566);
+              transform: scale(1.03);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ul::-webkit-scrollbar {
+  display: none;
+}

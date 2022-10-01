@@ -48,6 +48,23 @@ let data = fetch(url)
     displayUi(array)
     creatOption(array)
   })
+  .catch((error) => {
+    if (!navigator.onLine) {
+      let p = document.createElement('p')
+      p.innerText = 'Please check your enternet 📶'
+      p.style.color = 'red'
+      p.style.fontSize = '4rem'
+      p.style.textAlign = 'center'
+      ul.append(p)
+    } else {
+      let p = document.createElement('p')
+      p.innerText = `Something went wrong... 404`
+      p.style.color = 'red'
+      p.style.fontSize = '4rem'
+      p.style.textAlign = 'center'
+      ul.append(p)
+    }
+  })
 
 select.addEventListener('change', (e) => {
   ul.innerHTML = ''
@@ -65,4 +82,3 @@ select.addEventListener('change', (e) => {
       displayUi(d)
     })
 })
-
